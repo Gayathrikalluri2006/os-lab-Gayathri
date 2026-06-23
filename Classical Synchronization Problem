@@ -1,0 +1,7 @@
+#include<stdio.h>
+
+int main()
+{
+    printf("Producer Consumer / Reader Writer / Dining Philosopher Simulation\n");
+    return 0;
+}

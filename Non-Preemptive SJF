@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i,j,temp;
+    int bt[20];
+
+    printf("Enter Number of Processes: ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        printf("Burst Time P%d: ",i+1);
+        scanf("%d",&bt[i]);
+    }
+
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(bt[i]>bt[j])
+            {
+                temp=bt[i];
+                bt[i]=bt[j];
+                bt[j]=temp;
+            }
+        }
+    }
+
+    printf("Execution Order:\n");
+
+    for(i=0;i<n;i++)
+        printf("%d ",bt[i]);
+
+    return 0;
+}

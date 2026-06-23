@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main()
+{
+    int block[5]={100,500,200,300,600};
+    int process[4]={212,417,112,426};
+
+    printf("First Fit / Best Fit / Worst Fit Demonstration\n");
+
+    return 0;
+}

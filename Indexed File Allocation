@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main()
+{
+    int index,n;
+
+    printf("Enter Index Block: ");
+    scanf("%d",&index);
+
+    printf("Enter Number of Blocks: ");
+    scanf("%d",&n);
+
+    printf("Index Block=%d\n",index);
+
+    return 0;
+}

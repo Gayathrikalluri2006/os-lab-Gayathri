@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+    int block[5]={100,500,200,300,600};
+    int process=212;
+    int best=9999,index=-1;
+
+    for(int i=0;i<5;i++)
+    {
+        if(block[i]>=process && block[i]<best)
+        {
+            best=block[i];
+            index=i;
+        }
+    }
+
+    printf("Allocated in Block %d\n",index+1);
+
+    return 0;
+}

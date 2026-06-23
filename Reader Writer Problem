@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<pthread.h>
+
+int data=0;
+
+void *reader()
+{
+    printf("Read=%d\n",data);
+}
+
+void *writer()
+{
+    data++;
+    printf("Written=%d\n",data);
+}
+
+int main()
+{
+    pthread_t r,w;
+
+    pthread_create(&w,NULL,writer,NULL);
+    pthread_create(&r,NULL,reader,NULL);
+
+    pthread_join(w,NULL);
+    pthread_join(r,NULL);
+
+    return 0;
+}

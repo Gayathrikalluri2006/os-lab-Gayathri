@@ -1,0 +1,7 @@
+#include<stdio.h>
+
+int main()
+{
+    printf("Optimal Page Replacement Simulation\n");
+    return 0;
+}
